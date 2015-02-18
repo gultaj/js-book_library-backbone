@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: 9000,
-					base: ['src/'],
+					base: ['site/'],
 					hostname: "localhost",
 					open: true,
 					livereload: 35729
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			livereload: {
-				files: 'src/index.html',
+				files: 'site/index.html',
 				options: {
 					livereload: true
 				}
