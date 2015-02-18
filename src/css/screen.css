@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'sans-serif';
+	padding: 0 30px;
+}
+
+#book-list {
+	float: left;
+	width: 70%;
+	padding-right: 20px;
+}
+#addBook {
+	float: right;
+	width: 30%;
+	border: 1px solid gray;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-top: 20px;
+	margin-top: 10px;
+}
+#addBook label {
+	float: left;
+	width: 30%;
+	padding: 3px 0;
+}
+#addBook input {
+	margin: 3px 0;
+}
+#addBook #add {
+	display: block;
+	background: white;
+	border-radius: 2px;
+	border: 1px solid #AEDF99;
+	padding: 5px 20px;
+	font-size: 1.2rem;
+	margin: 10px auto;
+	cursor: pointer;
+}
+#addBook #add:hover {
+	background: #AEDF99;
+}
+.book-container {
+	float: left;
+	width: calc(50% - 2 * 10px);
+	padding: 10px;
+	/*clear: both;*/
+	margin-bottom: 10px;
+	overflow: hidden;
+	border-radius: 2px;
+	border: 1px solid #F0F0F0;
+	margin: 10px;
+	position: relative;
+}
+
+.book-container img {
+	float: left;
+	margin-right: 10px;
+}
+
+.book-container .delete {
+	background: white;
+	border: 1px solid pink;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+.book-container .delete:hover {
+	background: pink;
+	color: white;
+}
+
+.book-container ul {
+	margin: 0;
+}
