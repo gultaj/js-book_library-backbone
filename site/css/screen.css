@@ -18,6 +18,7 @@ body {
 	border: 1px solid gray;
 	border-radius: 2px;
 	padding-left: 20px;
+	padding-right: 20px;
 	padding-top: 20px;
 	margin-top: 10px;
 }
@@ -28,6 +29,7 @@ body {
 }
 #addBook input {
 	margin: 3px 0;
+	width: 70%;
 }
 #addBook #add {
 	display: block;
@@ -38,6 +40,9 @@ body {
 	font-size: 1.2rem;
 	margin: 10px auto;
 	cursor: pointer;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 10px;
 }
 #addBook #add:hover {
 	background: #AEDF99;
