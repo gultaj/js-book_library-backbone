@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
 
-$dsn = "mysql:host=localhost;dbname=booklibrary;charset=$charset";
+$dsn = "mysql:host=localhost;dbname=booklibrary";
 try {
     $dbh = new PDO($dsn, 'root', '');
 } catch (PDOException $e) {

@@ -19,4 +19,4 @@ app.BookView = Backbone.View.extend({
 		this.model.destroy();
 		this.remove();
 	}
-})
+});
