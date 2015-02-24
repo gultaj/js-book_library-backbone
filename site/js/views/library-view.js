@@ -8,11 +8,13 @@ app.LibraryView = Backbone.View.extend({
 		'click #add': 'addBook'
 	},
 	
-	initialize: function(initialBook) {
+	initialize: function() {
 		this.$list = this.$('#book-list');
-		this.collection = new app.Library(initialBook);
-		this.listenTo(this.collection, 'add', this.renderBook);
+		this.collection = new app.Library();
+		this.collection.fetch({reset: true});
 		this.render();
+		this.listenTo(this.collection, 'add', this.renderBook);
+		this.listenTo( this.collection, 'reset', this.render );
 	},
 
 	render: function() {
@@ -35,6 +37,6 @@ app.LibraryView = Backbone.View.extend({
 				$(elem).val('');
 			}
 		});
-		this.collection.add(new app.Book(formData));
+		this.collection.create(formData);
 	}
 });
