@@ -46,14 +46,14 @@ $app->post('/books', function() use ($app, $dbh) {
 		':author' => $data['author'],
 		':releaseDate' => $data['releaseDate'],
 	]);
-	$str =  $res ? 'Success!' : 'Error';
+	$str = $res ? json_encode(['id' => $dbh->lastInsertId()]) : 'Error';
 	$app->response->write($str);
 });
 
 $app->delete('/books/:id', function($id) use ($app, $dbh) {
 	$stmt = $dbh->prepare('DELETE FROM book WHERE id = :id');
 	$res = $stmt->execute([':id' => $id]);
-	$str =  $res ? 'Success!' : 'Error';
+	$str = $res ? 'Success!' : 'Error';
 	$app->response->write($str);
 });
 
